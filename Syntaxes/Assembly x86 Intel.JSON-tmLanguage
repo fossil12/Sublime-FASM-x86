@@ -1,6 +1,6 @@
-{ "name": "Assembly x86 Intel",
+{ "name": "Assembly x86 Intel (FASM)",
   "scopeName": "source.asm",
-  "fileTypes": ["asm", "ASM"],
+  "fileTypes": ["asm", "ASM", "inc", "INC"],
   "patterns": [
     { 
       "name": "support.class.8086/8088",
@@ -156,7 +156,7 @@
     },
 
     { "name": "keyword.control",
-      "match": "\\b(?i:db|dw|dd|dq|dt|do|resb|resw|resd|resq|rest|reso|incbin|equ|times|byte|word|dword|qword|tbyte|nosplit|near|far|org|label|struc|endstruc|istruc|iend|at|align|alignb|ends|offset|short|length|size|public|goto|seg|repeat|until)\\b",
+      "match": "\\b(?i:db|file|dw|du|dd|dp|df|dq|dt|rb|rw|rd|rp|rf|rq|rt)\\b",
       "captures": {
         "1": { "name": "keyword.control" }
       },
@@ -164,7 +164,7 @@
     },
 
     { "name": "keyword.control",
-      "match": "(?i:%include|%define|%assign|%strlen|%substr|%macro|%endmacro|%rep|%rotate|%o|%ifndef|%elif|%else|%endif|%error|%ifmacro|%ifnmacro|%elifmacro|%elifnmacro|%ifctx|%ifnctx|%elifctx|%elifnctx|%ifind|%elifind|%ifnind|%elifnind|%ifindi|%elifindi|%ifnidni|%elifnidni|%ifid|%ifnum|%ifstr|%push|%pop|%clear|%arg|%stacksize|%local|%line|%if|%!)",
+      "match": "\\b(?i:=|<|<=|=>|>|<>|&|\\|~|and|or|not|xor|shl|shr|mod|if|else\\s+if|else|end if|used|defined|relativeto|count|eqtype|times|repeat|end\\s+repeat|while|end\\s+while|break|org|\\$|load|store|from|virtual|end\\s+virtual|align|err|assert|include|equ|restore|fix|macro|{|}|forward|reverse|common|#|struc|restruc|rept|irp|match)\\b",
       "captures": {
         "1": { "name": "keyword.control" }
       },
@@ -172,7 +172,7 @@
     },
 
     { "name": "keyword.control.__types__",
-      "match": "\\b(?i:__float8__|__float16__|__float32__|__float64__|__float80m__|__float80e__|__float128l__|__float128h__|__Infinity__|__NaN__|__QNaN__|__SNaN__|__NASM_MAJOR__|__NASM_MINOR__|__NASM_SUBMINOR__|__NASM_PATCHLEVEL__|__NASM_VERSION_ID__|__NASM_VER__|__FILE__|__LINE__|__BITS__|__DATE__|__TIME__|__DATE_NUM__|__TIME_NUM__|__UTC_DATE__|__UTC_TIME__|__UTC_DATE_NUM__|__UTC_TIME_NUM__|__POSIX_TIME__|__SECT__)\\b",
+      "match": "\\b(?i:pword|fword|ptr|short|near|far|byte|word|dword|fword|pword|qword|tbyte|tword|dqword|xword|qqword|yword|label|char|wchar)\\b",
       "captures": {
         "1": { "name": "keyword.control.__types__" }
       },
@@ -180,7 +180,7 @@
     },
 
     { "name": "entity.name.function.directives",
-      "match": "\\b(?i:bits 16|bits 32|bits 64|use16|use32|use64|\\[bits 16\\]|\\[bits 32\\]|\\[bits 64\\]|default|section|segment|absolute|extern|global|common|cpu)\\b",
+      "match": "\\b(?i:format|format\\s+(MZ|PE|ELF32|ELF64|COFF|MS\\s+COFF|MS64\\s+COFF)|use16|use32|use64|heap|stack|entry|local|section|segment|data|end\\s+data|readable|writeable|executable|interpreter|shareable|discardable|notpageable|linkremove|linkinfo|dynamic|note|fixups|resource\\s+from|rva|extrn|public|plt)\\b",
       "captures": {
         "1": { "name": "entity.name.function.directives" }
       },
@@ -237,14 +237,22 @@
     },
 
     { "name": "markup.italic",
-      "match": "(\\w+[:])",
+      "match": "(\\w+[:]|@@|@f|@b)",
       "captures": {
           "0": { "name": "markup.italic" }
       },
       "comment": "Assembly label"
+    },
+    {
+      "name": "markup.italic.address-deref",
+      "match": "\\[([\\w_-]+)\\]",
+      "captures": {
+        "1" : { "name": "markup.italic.address-deref" }
+      },
+      "comment": "Assembly address dereference"
     }
     
   ],
-  "uuid": "94483e06-77e4-431e-be96-a456fe05c523"
+  "uuid": "079B66EE-11D3-435D-A350-8EF8C625E4BA"
 }
 

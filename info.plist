@@ -3,13 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Assembly-x86</string>
+	<string>FASM-x86</string>
   <key>ordering</key>
   <array>
-    <string>94483E06-77E4-431E-BE96-A456FE05C523</string>
-    <string>25754B00-678C-41D3-8900-EDFD46171DAB</string>
+    <string>079B66EE-11D3-435D-A350-8EF8C625E4BA</string>
   </array>
   <key>uuid</key>
-	<string>43a19af9-62f3-4b11-9a2e-d2b19b6cf20e</string>
+	<string>3322F61A-40BD-4E83-AFE7-AC08BB1D4989</string>
 </dict>
 </plist>
