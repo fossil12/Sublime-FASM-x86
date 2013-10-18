@@ -7,9 +7,13 @@ It's based on the [Assembly-x86](https://github.com/ljgago/Assembly-x86) package
 # Usage
 ## Install
 
-Got to your Packages folder and then
+Go to your Packages folder (hint: it's in the [data directory](Data Directory)) and then
 
-    git clone https://github.com/fossil12/Assembly-x86.git
+    git clone https://github.com/fossil12/Sublime-FASM-x86.git
+    
+OR
+
+[Download](https://github.com/fossil12/Sublime-FASM-x86/archive/master.zip) it and put the unpacked folder in your Packages folder (hint: it's in the [data directory](Data Directory)).
 
 # Edit/Contribute
 
