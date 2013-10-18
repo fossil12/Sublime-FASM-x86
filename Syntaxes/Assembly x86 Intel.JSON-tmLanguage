@@ -28,7 +28,7 @@
     },
 
     { "name": "support.class.80386",
-      "match": "\\b(?i:bsf|bsr|bt|btc|btr|bts|cdq|cmpsd|cwde|insb|insw|insd|iret|iretd|jcxz|jecxz|lsf|lgs|lss|lodsd|loopw|loopd|loopew|looped|loopzw|loopzd|loopnew|loopned|loopnzw|loopnzd|movsw|movsd|movsx|movzx|popad|popfd|pushad|pushfd|scasd|seta|setae|setb|setbe|setc|sete|setg|setge|setl|setle|setna|setnae|setnb|setnbe|setnc|setne|setng|setnge|setnl|setnle|setno|setnp|setns|setnz|seto|setp|setpe|setpo|sets|setz|shld|shrd|stosb|stosw)\\b",
+      "match": "\\b(?i:bsf|bsr|bt|btc|btr|bts|cdq|cmpl|cmpsd|cwde|insb|insw|insd|iret|iretd|jcxz|jecxz|lsf|lgs|lss|lodsd|loopw|loopd|loopew|looped|loopzw|loopzd|loopnew|loopned|loopnzw|loopnzd|movl|movsbl|movsw|movsd|movsx|movzx|popad|popfd|pushad|pushfd|pushl|scasd|seta|setae|setb|setbe|setc|sete|setg|setge|setl|setle|setna|setnae|setnb|setnbe|setnc|setne|setng|setnge|setnl|setnle|setno|setnp|setns|setnz|seto|setp|setpe|setpo|sets|setz|shld|shrd|stosb|stosw)\\b",
       "captures": {
         "1": { "name": "support.class.80386" }
       },
@@ -201,6 +201,14 @@
           "1": { "name": "constant.numeric.dec" }
       },
       "comment": "Decimal numbers"
+    },
+
+    { "name": "constant.numeric.hex",
+      "match": "\\b([0-9a-fA-F]+)\\b",
+      "captures": {
+          "1": { "name": "constant.numeric.dec" }
+      },
+      "comment": "Exadecimal numbers format: FF"
     },
 
     { "name": "constant.numeric.hex",
