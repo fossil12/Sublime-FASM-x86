@@ -28,7 +28,7 @@
     },
 
     { "name": "support.class.80386",
-      "match": "\\b(?i:bsf|bsr|bt|btc|btr|bts|cdq|cmpl|cmpsd|cwde|insb|insw|insd|iret|iretd|jcxz|jecxz|lsf|lgs|lss|lodsd|loopw|loopd|loopew|looped|loopzw|loopzd|loopnew|loopned|loopnzw|loopnzd|movl|movsbl|movsw|movsd|movsx|movzx|popad|popfd|pushad|pushfd|pushl|scasd|seta|setae|setb|setbe|setc|sete|setg|setge|setl|setle|setna|setnae|setnb|setnbe|setnc|setne|setng|setnge|setnl|setnle|setno|setnp|setns|setnz|seto|setp|setpe|setpo|sets|setz|shld|shrd|stosb|stosw)\\b",
+      "match": "\\b(?i:bsf|bsr|bt|btc|btr|bts|cdq|cmpb|cmpl|cmpsd|cwde|insb|insw|insd|iret|iretd|jcxz|jecxz|lsf|lgs|lss|lodsd|loopw|loopd|loopew|looped|loopzw|loopzd|loopnew|loopned|loopnzw|loopnzd|movb|movl|movw|movsbl|movsw|movsd|movsx|movzbl|movzwl|movzx|popad|popfd|pushad|pushfd|pushl|scasd|seta|setae|setb|setbe|setc|sete|setg|setge|setl|setle|setna|setnae|setnb|setnbe|setnc|setne|setng|setnge|setnl|setnle|setno|setnp|setns|setnz|seto|setp|setpe|setpo|sets|setz|shld|shrd|stosb|stosw|testb)\\b",
       "captures": {
         "1": { "name": "support.class.80386" }
       },
@@ -204,7 +204,7 @@
     },
 
     { "name": "constant.numeric.hex",
-      "match": "\\b([0-9a-fA-F]+)\\b",
+      "match": "\\b([0-9a-fA-F]{2,})\\b",
       "captures": {
           "1": { "name": "constant.numeric.dec" }
       },
