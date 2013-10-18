@@ -11,7 +11,7 @@ Got to your Packages folder and then
 
     git clone https://github.com/fossil12/Assembly-x86.git
 
-# Edit
+# Edit/Contribute
 
 Download and install [AAAPackageDev](https://bitbucket.org/guillermooo/aaapackagedev).
 
